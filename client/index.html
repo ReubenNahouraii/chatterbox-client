@@ -7,6 +7,7 @@
 
     <!-- dependencies -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script>
     <script>
       // YOU DO NOT NEED TO EDIT THIS CODE
       if (!/(&|\?)username=/.test(window.location.search)) {
@@ -18,15 +19,34 @@
         window.location.search = newSearch;
       }
     </script>
-    <!-- your scripts -->
-    <script src="env/config.js"></script>
-    <script src="scripts/app.js"></script>
+
   </head>
   <body>
     <div id="main">
       <h1>chatterbox</h1>
       <!-- Your HTML goes here! -->
+      <p>Room:</p>
+      <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select> 
+      
+        <form id="send-message-area">
+          <input type="text">
+          <button id="submitMessage">Submit</button>
+        </form>
     </div>
+
     <div id="chats"></div>
+
   </body>
+
+  <!-- your scripts -->
+    <script src="env/config.js"></script>
+    <script src="scripts/app.js"></script>
+    <script>
+    </script>
+
 </html>
